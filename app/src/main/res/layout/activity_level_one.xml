@@ -7,22 +7,12 @@
     tools:context=".LevelOneActivity">
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:layout_width="670dp"
+        android:layout_height="414dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498"
-        app:srcCompat="@drawable/titlebg" />
-
-    <ImageView
-        android:id="@+id/ImagePlay"
-        android:layout_width="109dp"
-        android:layout_height="61dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/playbtn"
-        tools:layout_editor_absoluteY="400dp" />
+        app:srcCompat="@drawable/gamebg" />
 </androidx.constraintlayout.widget.ConstraintLayout>
