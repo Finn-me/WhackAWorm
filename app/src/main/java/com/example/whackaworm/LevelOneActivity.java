@@ -15,7 +15,7 @@ public class LevelOneActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageView imageViewPlay = (ImageView) findViewById(R.id.ImagePlay);
+        ImageView imageViewPlay = (ImageView) findViewById(R.id.imageView3);
         imageViewPlay.setOnTouchListener(new View.OnTouchListener() {
 
             @Override
