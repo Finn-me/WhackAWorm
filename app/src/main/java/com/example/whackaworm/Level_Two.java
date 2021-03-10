@@ -8,26 +8,24 @@ import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Random;
 
-public class LevelOneActivity extends AppCompatActivity {
+public class Level_Two extends AppCompatActivity {
     TextView textView;
     TextView ScoreView;
-    ImageView button;
-ImageView[] Worms = new ImageView[8];
+    ImageView[] Worms = new ImageView[8];
     int score = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_level_one);
+        setContentView(R.layout.activity_level_two);
         textView = findViewById(R.id.timerTextView);
         ScoreView = findViewById(R.id.ScoreView);
-        Button nextLevelButton = findViewById(R.id.button);
+
 
 
         ImageView Worm1= findViewById(R.id.worm1);
@@ -43,7 +41,7 @@ ImageView[] Worms = new ImageView[8];
             public boolean onTouch(View v, MotionEvent event) {
                 Worm1.setVisibility(View.INVISIBLE);
                 Toast.makeText(getApplicationContext(),"worm 1 was touched", Toast.LENGTH_SHORT).show();
-               score = score + 1;
+                score = score + 1;
                 ScoreView.setText(score+"");
                 return false;
             }
@@ -111,18 +109,7 @@ ImageView[] Worms = new ImageView[8];
                 return false;
             }
         });
-        nextLevelButton.setOnTouchListener(new View.OnTouchListener() {
-                                             @Override
-                                             public boolean onTouch(View v, MotionEvent event) {
-                                                 // TODO Auto-generated method stub
-                                                 Intent intent = new Intent(getApplicationContext(), Level_Two.class);
-                                                 startActivity(intent);
 
-                                                 return false;
-                                             }
-                                         });
-
-        button.setVisibility(View.INVISIBLE);
         Worm1.setVisibility(View.INVISIBLE);
         Worm2.setVisibility(View.INVISIBLE);
         Worm3.setVisibility(View.INVISIBLE);
@@ -140,7 +127,7 @@ ImageView[] Worms = new ImageView[8];
         Worms[5] = Worm6;
         Worms[6] = Worm7;
         Worms[7] = Worm8;
-        CountDownTimer wormTimer = new CountDownTimer(3000, 3000) {
+        CountDownTimer wormTimer = new CountDownTimer(1000, 1000) {
             //Declare a global variable here
             Random random = new Random();
             int randNum;
@@ -169,7 +156,6 @@ ImageView[] Worms = new ImageView[8];
             public void onFinish() {
                 wormTimer.cancel();
                 textView.setText("0");
-                button.setVisibility(View.VISIBLE);
             }
         }.start();
 
